@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "image_path": "\/CommunityHub\/photos\/450347501_986835939595445_8639307683199172179_n.png",
+        "caption": "WELCOME TO LAGRO HIGH SCHOOL",
+        "width": 2880,
+        "height": 1067,
+        "object_position": "center",
+        "object_fit": "contain"
+    },
+    {
+        "id": 3,
+        "image_path": "\/CommunityHub\/photos\/halalan.jpg",
+        "caption": "HALALAN FOR SSLG",
+        "width": 1350,
+        "height": 1350,
+        "object_position": "center",
+        "object_fit": "contain"
+    },
+    {
+        "id": 4,
+        "image_path": "\/CommunityHub\/photos\/SMARTLHS.jpg",
+        "caption": "BE A S.M.A.R.T LAGRONIAN",
+        "width": 1215,
+        "height": 1215,
+        "object_position": "center",
+        "object_fit": "contain"
+    }
+]

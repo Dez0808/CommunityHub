@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+  header("Location: /CommunityHub/Demo_Login.php");
+  exit;
+}
 
 // Check if user is admin
 $isAdmin = isset($_SESSION["role"]) && $_SESSION["role"] === "admin";
@@ -12,7 +16,7 @@ $msg = "";
 include "Demo_DBConnection.php";
 
 // File to store slide data
-$slides_file = __DIR__ . '/Logged/slides_data.json';
+$slides_file = __DIR__ . '/slides_data.json';
 
 // Default slides
 $default_slides = [
@@ -801,7 +805,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $isAdmin) {
 <body>
   <?php include "includes/header.php" ?>
   <?php include "includes/loading.php" ?>
-
   <main>
     <section class="content">
       <!-- Debug information - remove in production -->
@@ -946,6 +949,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $isAdmin) {
 
   <?php include "Post.php" ?>
 
+  <div>
+    <?php
+    include "index.php"
+    ?>
+  </div>
   <?php
   include "includes/footer.php"
   ?>
